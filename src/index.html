@@ -5,20 +5,87 @@
         <title>Itelios Front-end Challenge</title>
 
         <!-- STYLESHEETS -->
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:400,700|Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="./assets/css/app.css">
 
         <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon" />
     </head>
     <body>
 
-        <h1>Front-end test</h1>
+        <section class="product-recommendation">
 
-        <section>
+            <div class="product-recommendation__viewed">
+                <h3>Você visitou:</h3>
+
+                <div class="card-product">
+                    <div class="card-product__image-wrap">
+                        <img src="" alt="" class="card-product__image"/>
+                    </div>
+                    <div class="card-product__content-wrap">
+                        <div class="card-product__name">
+                            Tablet Samsung Galaxy Tab2 7.0 P3100 Branco com Tela 7,0”, Processador Dual Core...
+                        </div>
+                        <div class="card-product__pricing">
+                            Por: <span>R$ 1.199,00</span>
+                        </div>
+                        <div class="card-product__installment">
+                            ou <span>12x de R$ 99,92</span> sem juros
+                        </div>
+                        <div class="card-product__cta">
+                            <button class="card-product__add-to-cart">
+                                adicionar ao carrinho <i class="material-icons">&#xE854;</i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="product-recommendation__featured">
+                <h3>e talvez se interesse por:</h3>
+
+                <div class="card-product--slider-wrap">
+                    <div class="card-product--slider" data-slider-id="product-recommendation">
+
+                        <div class="card-product">
+                            <div class="card-product__image-wrap">
+                                <img src="" alt="" class="card-product__image"/>
+                            </div>
+                            <div class="card-product__content-wrap">
+                                <div class="card-product__name">
+                                    Tablet Samsung Galaxy Tab2 7.0 P3100 Branco com Tela 7,0”, Processador Dual Core...
+                                </div>
+                                <div class="card-product__pricing">
+                                    Por: <span>R$ 1.199,00</span>
+                                </div>
+                                <div class="card-product__installment">
+                                    ou <span>12x de R$ 99,92</span> sem juros
+                                </div>
+                                <div class="card-product__cta">
+                                    <button class="card-product__add-to-cart">
+                                        adicionar ao carrinho <i class="material-icons">&#xE854;</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card-product--slider-pager" data-slider-id="product-recommendation">
+
+                        <button class="is-active" data-page-id="0"></button>
+                        <button data-page-id=""></button>
+                        <button data-page-id=""></button>
+
+                    </div>
+                </div>
+
+            </div>
 
         </section>
 
         <!-- SCRIPTS -->
         <script type="text/javascript" src="./assets/js/app.js"></script>
+
+
     </body>
 </html>
