@@ -59,3 +59,6 @@ typings/
 
 # distribution files
 dist/
+
+# default webpack files
+mix-manifest.json
