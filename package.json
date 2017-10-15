@@ -1,0 +1,26 @@
+{
+  "name": "itelios-frontend-challenge",
+  "version": "1.0.0",
+  "description": "Desafio de admissão para desenvolvedores front-end da Itelios",
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreykoens/itelios-frontend-challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andreykoens/itelios-frontend-challenge/issues"
+  },
+  "homepage": "https://github.com/andreykoens/itelios-frontend-challenge#readme",
+  "devDependencies": {
+    "imagemin-webpack-plugin": "^1.5.2",
+    "laravel-mix": "^1.5.0"
+  }
+}
