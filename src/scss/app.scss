@@ -1,0 +1,27 @@
+/* #############################################################################
+    ITELIOS FRONT END CHALLENGE
+############################################################################# */
+
+/*  SETTINGS       ##########################################################
+    General imports and configuration
+    Mixins, atoms and external libraries
+*/
+
+    //variables and mixins
+    @import './settings/s__color-table';
+
+
+/*  COMPONENTS     ##########################################################
+    Styling of components and modules
+    Layout parts will be considered components
+*/
+
+    @import './components/c__card-visited';
+    @import './components/c__card-visited--slider';
+
+
+/*  PAGES          ##########################################################
+    Reserved for page-related structures
+*/
+
+    @import './pages/p__itelios-challenge';
