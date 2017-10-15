@@ -19,4 +19,5 @@
     //BUILD
         mix.js('src/js/app.js', 'dist/assets/js')
            .sass('src/scss/app.scss', 'dist/assets/css')
-           .copy( 'src/img', 'dist/assets/img', false );
+           .copy( 'src/img', 'dist/assets/img', false )
+           .copy( 'src/*.html', 'dist/', false );
