@@ -8,7 +8,10 @@
 */
 
     //variables and mixins
+    @import './settings/s__normalize';
     @import './settings/s__color-table';
+    @import './settings/s__typography';
+    @import './settings/s__animation';
 
 
 /*  COMPONENTS     ##########################################################
