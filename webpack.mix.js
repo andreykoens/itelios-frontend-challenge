@@ -11,7 +11,7 @@
                     pngquant: {
                         quality: '95-100',
                     },
-                    test: /\.(jpe?g|png|gif|svg)$/i,
+                    test: /\.(jpe?g|png|gif|svg|ico)$/i,
                 } ),
             ],
         } );
