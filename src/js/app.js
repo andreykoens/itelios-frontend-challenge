@@ -6,12 +6,13 @@
 
     import * as requests from "./requests/requests.js";
     import * as cardProduct from "./components/c__card-product.js";
-    import * as cardProductSlider from "./components/c__card-product--slider.js";
+    import CPSlider from "./components/c__card-product--slider.js";
     import "./helpers/trunc.js";
 
 /*  VARIABLES   ############################################################# */
 
-    let dataProduct;
+
+    var dataProduct;
 
 /*  GET DATA    ############################################################# */
 
@@ -38,4 +39,9 @@
             document.getElementsByClassName("product-recommendation__featured")[0].querySelectorAll(".card-product--slider")[0],
             document.getElementsByClassName("product-recommendation__featured")[0].querySelectorAll(".card-product")[0].innerHTML
         )
+        const cardSlider = new CPSlider(
+            document.getElementsByClassName('card-product--slider-wrap')[0],
+            {slideTimeout: 10000}
+        );
+        window.onresize = function(){cardSlider.reinit();}
     };
