@@ -1,0 +1,97 @@
+/* #############################################################################
+    CARD PRODUCT
+############################################################################# */
+
+/*  DEFAULT       ########################################################### */
+
+    .card-product {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        border: 1px solid $c_ebb;
+        & + .card-product {
+            border-left: 0;
+        }
+    }
+    .card-product__permalink {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 10;
+    }
+    .card-product__image-wrap {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 180px;
+        padding: 20px;
+    }
+    .card-product__image {
+        height: auto;
+        width: auto;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .card-product__content-wrap {
+        padding: 10px 20px 20px 20px;
+    }
+    .card-product__name {
+        font-size: 16px;
+        color: $c_shark;
+        min-height: 54px;
+    }
+    .card-product__pricing {
+        margin-top: 25px;
+        color: $c_shuttle;
+        font-size: 16px;
+        span {
+            color: $c_oxford;
+            font-size: 23px;
+            font-weight: 700;
+        }
+    }
+    .card-product__installment {
+        margin-top: 20px;
+        font-size: 17px;
+        color: $c_shuttle;
+        span {
+            color: $c_oxford;
+            font-weight: 700;
+        }
+    }
+    .card-product__cta {
+        padding-top: 0;
+        max-height: 0px;
+        overflow: hidden;
+        transition: $t_normal;
+        position: absolute;
+        top: calc(100% - 1px);
+        left: -1px;
+        width: 100%;
+        background: $c_white;
+        padding: 0;
+        border: 1px solid $c_transparent;
+        opacity: 0;
+    }
+    .card-product__add-to-cart {
+        position: relative;
+        z-index: 20;
+        margin: 0 auto;
+        width: calc(100% - 40px);
+    }
+
+    .card-product:hover {
+        .card-product__cta {
+            opacity: 1;
+            border: 1px solid $c_ebb;
+            border-width: 0 1px 1px 1px;
+            padding: 0 0 20px 0;
+            max-height: 103px;
+        }
+    }

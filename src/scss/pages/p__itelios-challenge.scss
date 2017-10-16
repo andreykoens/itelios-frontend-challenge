@@ -1,0 +1,45 @@
+/* #############################################################################
+    CHALLENGE STRUCTURE
+############################################################################# */
+
+/*  DEFAULT       ########################################################### */
+
+    body {
+        background: $c_alto;
+    }
+
+/*  PRODUCT RECOMMENDATION SECTION       #################################### */
+
+    .product-recommendation--wrap {
+        background: $c_white;
+        width: 100%;
+        padding: 30px 0 130px 0;
+    }
+    .product-recommendation {
+        width: 100%;
+        padding: 0 20px;
+        max-width: 1280px;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin: 0 auto;
+        h3 {
+            display: block;
+            flex: 1 1 100%;
+            font-size: 29px;
+            color: $c_shuttle;
+        }
+    }
+
+    .product-recommendation__viewed {
+        width: 25%;
+        .card-product {
+            border-width: 1px 0 1px 1px;
+        }
+    }
+
+    .product-recommendation__featured {
+        width: 75%;
+    }
