@@ -14,7 +14,9 @@
             item.getElementsByClassName("card-product__image")[0].src = "./assets/img/" + product.imageName;
             item.getElementsByClassName("card-product__name")[0].innerHTML = product.name.trunc(100, true);
             item.getElementsByClassName("card-product__pricing")[0].querySelectorAll("span")[0].innerHTML = product.price;
-            item.getElementsByClassName("card-product__installment")[0].innerHTML = product.productInfo.paymentConditions;
+
+            let customInstallmentMarkup = product.productInfo.paymentConditions.replace("ou até ", "ou até <span>").replace(" sem juros", "</span> sem juros");
+            item.getElementsByClassName("card-product__installment")[0].innerHTML = customInstallmentMarkup;
 
             item.setAttribute("businessId", product.businessId);
 
