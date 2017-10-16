@@ -11,35 +11,58 @@
 /*  PRODUCT RECOMMENDATION SECTION       #################################### */
 
     .product-recommendation--wrap {
+        max-width: 100%;
         background: $c_white;
         width: 100%;
-        padding: 30px 0 130px 0;
+        padding: 0 0 50px 0;
     }
     .product-recommendation {
-        width: 100%;
+        // width: 100%;
         padding: 0 20px;
         max-width: 1280px;
-        display: -webkit-flex;
-        display: -ms-flex;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
         margin: 0 auto;
+        @media (min-width: 660px) {
+            display: -webkit-flex;
+            display: -ms-flex;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
         h3 {
             display: block;
-            flex: 1 1 100%;
             font-size: 29px;
             color: $c_shuttle;
+            margin: 25px 0;
         }
     }
 
     .product-recommendation__viewed {
-        width: 25%;
+        width: 100%;
+        @media (min-width: 660px) {
+            width: 50%;
+        }
+        @media (min-width: 1024px) {
+            width: 25%;
+        }
+        @media (min-width: 1280px) {
+            width: 25%;
+        }
         .card-product {
-            border-width: 1px 0 1px 1px;
+            @media (min-width: 660px) {
+                border-width: 1px 0 1px 1px;
+            }
         }
     }
 
     .product-recommendation__featured {
-        width: 75%;
+        width: 100%;
+        @media (min-width: 660px) {
+            width: 50%;
+        }
+        @media (min-width: 1024px) {
+            width: 75%;
+        }
+        @media (min-width: 1280px) {
+            width: 75%;
+        }
     }

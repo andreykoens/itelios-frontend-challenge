@@ -16,13 +16,28 @@
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        width: 100%;
         border: 1px solid $c_ebb;
+        width: calc(100% - 2px);
+        @media (min-width: 660px) {
+            width: calc(100% - 1px);
+        }
+        @media (min-width: 1024px) {
+            width: 100%;
+        }
 
         .card-product {
             border-width: 0 1px 0 0;
-            flex: 0 0 calc( 33.333% - 1.2px );
             z-index: 50;
+            flex: 0 0 100%;
+            @media (min-width: 660px) {
+                flex: 0 0 calc( 100% - 1.2px );
+            }
+            @media (min-width: 1024px) {
+                flex: 0 0 calc( 33.333% - 1.2px );
+            }
+            @media (min-width: 1280px) {
+                flex: 0 0 calc( 33.333% - 1.2px );
+            }
         }
     }
     .card-product--slider-pager {

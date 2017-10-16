@@ -14,6 +14,12 @@
         & + .card-product {
             border-left: 0;
         }
+        &:hover {
+            background: -moz-linear-gradient(top,  rgba(244,244,244,1) 0%, rgba(255,255,255,0) 100%);
+            background: -webkit-linear-gradient(top,  rgba(244,244,244,1) 0%,rgba(255,255,255,0) 100%);
+            background: linear-gradient(to bottom,  rgba(244,244,244,1) 0%,rgba(255,255,255,0) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#00ffffff',GradientType=0 );
+        }
     }
     .card-product__permalink {
         position: absolute;
@@ -22,6 +28,8 @@
         height: 100%;
         width: 100%;
         z-index: 10;
+        transition: $t_fast;
+        opacity: 0;
     }
     .card-product__image-wrap {
         display: -webkit-flex;
@@ -31,12 +39,16 @@
         justify-content: center;
         height: 180px;
         padding: 20px;
+        z-index: 5;
+        position: relative;
+        mix-blend-mode: multiply;
     }
     .card-product__image {
         height: auto;
         width: auto;
         max-width: 100%;
         max-height: 100%;
+
     }
     .card-product__content-wrap {
         padding: 10px 20px 20px 20px;
@@ -44,10 +56,11 @@
     .card-product__name {
         font-size: 16px;
         color: $c_shark;
-        min-height: 54px;
+        height: 72px;
+        overflow: hidden;
     }
     .card-product__pricing {
-        margin-top: 25px;
+        margin-top: 15px;
         color: $c_shuttle;
         font-size: 16px;
         span {
@@ -69,7 +82,6 @@
         padding-top: 0;
         max-height: 0px;
         overflow: hidden;
-        transition: $t_normal;
         position: absolute;
         top: calc(100% - 1px);
         left: -1px;
@@ -78,6 +90,9 @@
         padding: 0;
         border: 1px solid $c_transparent;
         opacity: 0;
+        @media (min-width: 1024px) { //prevent flicker in transition
+            transition: $t_normal;
+        }
     }
     .card-product__add-to-cart {
         position: relative;
@@ -93,5 +108,20 @@
             border-width: 0 1px 1px 1px;
             padding: 0 0 20px 0;
             max-height: 103px;
+        }
+    }
+
+    @media (max-width: 1023px) { //in small screens dont hide cta
+        .card-product:hover .card-product__cta,
+        .card-product__cta {
+            position: relative;
+            padding: 0;
+            opacity: 1;
+            border: 1px solid $c_transparent;
+            max-height: none;
+            .card-product__add-to-cart {
+                margin-top: 20px;
+                width: 100%;
+            }
         }
     }
