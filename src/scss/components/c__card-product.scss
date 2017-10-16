@@ -11,6 +11,7 @@
         flex-direction: column;
         position: relative;
         border: 1px solid $c_ebb;
+        z-index: 5;
         & + .card-product {
             border-left: 0;
         }
@@ -85,13 +86,33 @@
         position: absolute;
         top: calc(100% - 1px);
         left: -1px;
-        width: 100%;
+        width: calc(100% + 1px);
         background: $c_white;
         padding: 0;
         border: 1px solid $c_transparent;
+        border-width: 0 0 1px 0;
         opacity: 0;
+        z-index: 9;
         @media (min-width: 1024px) { //prevent flicker in transition
             transition: $t_normal;
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0px;
+                top: 0;
+                height: 100%;
+                width: 1px;
+                background: $c_ebb;
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                right: 0;
+                top: 0;
+                height: 100%;
+                width: 1px;
+                background: $c_ebb;
+            }
         }
     }
     .card-product__add-to-cart {
@@ -105,7 +126,7 @@
         .card-product__cta {
             opacity: 1;
             border: 1px solid $c_ebb;
-            border-width: 0 1px 1px 1px;
+            border-width: 0 0 1px 0;
             padding: 0 0 20px 0;
             max-height: 103px;
         }
